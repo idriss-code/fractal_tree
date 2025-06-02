@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arbre Fractal 3D Non-Planaire (Corrigé)</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="controls">
+      <div class="control-group">
+        <h4>Paramètres de base</h4>
+        <label>Profondeur: <span id="depthValue">6</span></label>
+        <input type="range" id="depth" min="3" max="8" value="6" />
+
+        <label>Facteur L: <span id="factorValue">0.7</span></label>
+        <input
+          type="range"
+          id="factor"
+          min="0.5"
+          max="0.9"
+          step="0.05"
+          value="0.7"
+        />
+      </div>
+
+      <div class="control-group">
+        <h4>Angles de bifurcation</h4>
+        <label>Angle gauche: <span id="leftAngleValue">30°</span></label>
+        <input type="range" id="leftAngle" min="10" max="60" value="30" />
+
+        <label>Angle droit: <span id="rightAngleValue">30°</span></label>
+        <input type="range" id="rightAngle" min="10" max="60" value="30" />
+      </div>
+
+      <div class="control-group">
+        <h4>Inclinaison (sortie du plan)</h4>
+        <label>Inclinaison gauche: <span id="leftTiltValue">0°</span></label>
+        <input type="range" id="leftTilt" min="-45" max="45" value="0" />
+
+        <label>Inclinaison droite: <span id="rightTiltValue">0°</span></label>
+        <input type="range" id="rightTilt" min="-45" max="45" value="0" />
+      </div>
+
+      <div class="control-group">
+        <h4>Torsion (rotation axiale)</h4>
+        <label>Torsion par niveau: <span id="twistValue">0°</span></label>
+        <input type="range" id="twist" min="0" max="90" value="0" />
+
+        <label>Variation aléatoire: <span id="randomValue">0°</span></label>
+        <input type="range" id="random" min="0" max="30" value="0" />
+      </div>
+
+      <div class="control-group">
+        <h4>Actions</h4>
+        <button onclick="regenerateTree()">Régénérer</button>
+        <button onclick="toggleAnimation()">Animation</button><br />
+        <button onclick="setPreset('original')">Original 2D</button>
+        <button onclick="setPreset('natural')">Naturel 3D</button>
+        <button onclick="setPreset('helix')">Hélice</button>
+      </div>
+    </div>
+
+    <div id="info">
+      <div>Arbre Fractal 3D - Rotations corrigées</div>
+      <div>Segments: <span id="segmentCount">0</span></div>
+      <div>Mode: <span id="modeInfo">3D Complet</span></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/tree-params.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/tree-generation.js"></script>
+    <script src="js/tree-visualization.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

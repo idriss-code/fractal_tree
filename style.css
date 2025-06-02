@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a1e;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  backdrop-filter: blur(10px);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#controls label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+#controls input[type="range"] {
+  width: 120px;
+  margin-bottom: 8px;
+}
+
+#controls button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+#controls button:hover {
+  background: #357abd;
+}
+
+#info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.control-group {
+  border: 1px solid #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.control-group h4 {
+  margin: 0 0 10px 0;
+  color: #4a90e2;
+  font-size: 14px;
+}
